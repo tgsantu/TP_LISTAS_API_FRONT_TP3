@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comidas Argentinas</title> 
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+      <input type="text" placeholder="Busca algo..." id="buscador">
+
+      <select name="" id="filtroProvincia">
+        <option value="">Todas las provincias</option>
+        <option value="Buenos Aires">Buenos Aires</option>
+        <option value="Catamarca">Catamarca</option>
+        <option value="Chaco">Chaco</option>
+        <option value="Chubut">Chubut</option>
+        <option value="Córdoba">Córdoba</option>
+        <option value="Corrientes">Corrientes</option>
+        <option value="Entre Ríos">Entre Ríos</option>
+        <option value="Formosa">Formosa</option>
+        <option value="Jujuy">Jujuy</option>
+        <option value="La Pampa">La Pampa</option>
+        <option value="La Rioja">La Rioja</option>
+        <option value="Mendoza">Mendoza</option>
+        <option value="Misiones">Misiones</option>
+        <option value="Neuquén">Neuquén</option>
+        <option value="Río Negro">Río Negro</option>
+        <option value="Salta">Salta</option>
+        <option value="San Juan">San Juan</option>
+        <option value="San Luis">San Luis</option>
+        <option value="Santa Cruz">Santa Cruz</option>
+        <option value="Santa Fe">Santa Fe</option>
+        <option value="Santiago del Estero">Santiago del Estero</option>
+        <option value="Tierra del Fuego">Tierra del Fuego</option>
+        <option value="Tucumán">Tucumán</option> 
+        <option value="Patagonia">Patagonia</option>                   
+      </select>    
+
+      <select name="" id="filtroCategoria">
+        <option value="">Todas las categorías</option>    
+      </select> 
+    
+    </header>
+
+    <main class="comida-container" id="comidaContainer">
+        <!-- Contenido Dinamico -->
+    </main>     
+
+    <section class="addFood">
+      <article class="formcontainer">
+
+        <form id="agregarComida">
+          <div class="con">
+            <label>Nombre de la comida</label> <br>
+            <input type="text" placeholder="Nombre de la comida" name="nombre" id="nombre" required>
+          </div>
+  
+          <div class="con">
+            <label>Categoría</label> <br>
+            <input type="text" placeholder="Categoría" id="categoria">
+          </div>
+  
+          <div class="con">
+            <label>Provincia</label> <br>
+            <select name="" id="provincia">
+              <option value="" disabled selected>Selecciona una provincia...</option>
+              <option value="Buenos Aires">Buenos Aires</option>
+              <option value="Catamarca">Catamarca</option>
+              <option value="Chaco">Chaco</option>
+              <option value="Chubut">Chubut</option>
+              <option value="Córdoba">Córdoba</option>
+              <option value="Corrientes">Corrientes</option>
+              <option value="Entre Ríos">Entre Ríos</option>
+              <option value="Formosa">Formosa</option>
+              <option value="Jujuy">Jujuy</option>
+              <option value="La Pampa">La Pampa</option>
+              <option value="La Rioja">La Rioja</option>
+              <option value="Mendoza">Mendoza</option>
+              <option value="Misiones">Misiones</option>
+              <option value="Neuquén">Neuquén</option>
+              <option value="Río Negro">Río Negro</option>
+              <option value="Salta">Salta</option>
+              <option value="San Juan">San Juan</option>
+              <option value="San Luis">San Luis</option>
+              <option value="Santa Cruz">Santa Cruz</option>
+              <option value="Santa Fe">Santa Fe</option>
+              <option value="Santiago del Estero">Santiago del Estero</option>
+              <option value="Tierra del Fuego">Tierra del Fuego</option>
+              <option value="Tucumán">Tucumán</option>                    
+            </select>
+          </div>
+  
+          <div class="con">
+            <label>Ingredientes</label> <br>
+            <div class="contenedor-ingredientes">
+              <input class="ingrediente" type="text" placeholder="ingredientes" id="ingredientes" required>
+            </div>
+            <button type="button" id="agregarIngrediente">Agregar Ingrediente</button>
+          </div>
+  
+          <div class="con">
+            <button type="submit" class="submit">Agregar Comida</button>
+          </div>
+        </form>
+      </article>
+    </section>
+
+    <script type="module" src="./main.js" defer></script>
+</body>
+</html>

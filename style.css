@@ -1,0 +1,101 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0px;
+    font-family: "Google Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+      "GRAD" 0;
+      }
+  
+  body {
+  background-color: rgb(183, 247, 255)
+}
+
+header {
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+
+  input {
+    width: 800px;
+    height: 40px;
+    border: none;
+    font-size: 1.6rem;
+    padding: 5px;
+    border-radius: 10px;
+  }
+  select{
+    height: 40px;
+  }
+}
+
+.comida-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
+  gap: 2vw;
+  justify-content: center;
+  margin-top: 1vw;
+
+  .card {
+    width: 17vw;
+    height: 35vh;
+    background-color: rgb(227, 252, 255);
+    padding: 5px;
+    border-radius: 10px;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+
+    .categoria {
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      color: rgb(0, 153, 173);
+      font-weight: 900;
+    }
+
+    .ingredientes {
+      margin-left: 2vw;
+    }
+
+    .provincia {
+      font-weight: 600;
+    }
+  }
+}
+
+.addFood {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  .formcontainer {
+    border-radius: 5px;
+    display: flex;
+    width: 30vw;
+    justify-content: center;
+    padding: 18px;
+    background-color: #56d5ff;
+    align-items: center;
+
+    label {
+      font-size: 1.5rem;
+    }
+    input, select {
+      font-size: 1.2rem;
+    }
+    .submit {
+      display: block;
+      margin: 0 auto;
+      margin-top: 18px;
+      padding: 15px;
+      font-size: 1.3rem;
+      background-color: #007da7;
+      border-style: none;
+      color: white;
+    }
+  }
+}
