@@ -51,7 +51,7 @@ header {
     border-width: 1px;
     border-style: solid;
 
-    .categoria {
+    .status {
       text-transform: uppercase;
       font-size: 0.8rem;
       color: rgb(0, 153, 173);
