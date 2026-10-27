@@ -1,15 +1,15 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0px;
-    font-family: "Google Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-variation-settings:
-      "GRAD" 0;
-      }
-  
-  body {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0px;
+  font-family: "Google Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "GRAD" 0;
+}
+
+body {
   background-color: rgb(183, 247, 255)
 }
 
@@ -28,43 +28,58 @@ header {
     padding: 5px;
     border-radius: 10px;
   }
-  select{
+
+  select {
     height: 40px;
   }
 }
 
-.comida-container {
+.personajes-container {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(4, max-content);
+  grid-template-columns: repeat(3, max-content);
   gap: 2vw;
   justify-content: center;
   margin-top: 1vw;
 
   .card {
-    width: 17vw;
-    height: 35vh;
+    width: 31vw;
     background-color: rgb(227, 252, 255);
-    padding: 5px;
+    padding: 10px;
     border-radius: 10px;
     border-color: black;
     border-width: 1px;
     border-style: solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 
-    .status {
-      text-transform: uppercase;
-      font-size: 0.8rem;
-      color: rgb(0, 153, 173);
-      font-weight: 900;
+    img {
+      width: 150px;
+      height: 150px;
     }
 
-    .ingredientes {
-      margin-left: 2vw;
+    .texto {
+      display: flex;
+      flex-direction: column;
+      width: 20vw;
+
+      h2 {
+        font-family: 'Simpsonfont', sans-serif
+      }
+
+      .frases {
+        margin-left: 2vw;
+      }
+
+      .occupation {
+        font-weight: 600;
+      }
+
     }
 
-    .provincia {
-      font-weight: 600;
-    }
+
   }
 }
 
@@ -72,6 +87,7 @@ header {
   display: flex;
   justify-content: center;
   margin-top: 20px;
+
   .formcontainer {
     border-radius: 5px;
     display: flex;
@@ -84,9 +100,12 @@ header {
     label {
       font-size: 1.5rem;
     }
-    input, select {
+
+    input,
+    select {
       font-size: 1.2rem;
     }
+
     .submit {
       display: block;
       margin: 0 auto;
