@@ -10,18 +10,21 @@
 }
 
 body {
-  background-color: rgb(183, 247, 255);
+  background-color: #ffec7f;
   display: flex;
   flex-direction: column;
 }
 
 header {
-  height: 60px;
+  height: 80px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
 
+  img {
+    height: 90%;
+  }
   input {
     width: 800px;
     height: 40px;
@@ -46,7 +49,7 @@ header {
 
   .card {
     width: 31vw;
-    background-color: rgb(227, 252, 255);
+    background-color: #fff7ca;
     padding: 10px;
     border-radius: 10px;
     border-color: black;
