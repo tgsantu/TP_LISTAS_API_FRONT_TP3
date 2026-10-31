@@ -26,7 +26,7 @@ function mostrarPersonajes(lista) {
     } else if (personaje.id === 20) {
       (personaje.phrases).splice(3, 1)
     }
-      container.innerHTML +=
+    container.innerHTML +=
       `
       <article class="card">
         <img src="https://cdn.thesimpsonsapi.com/500${personaje.portrait_path}" alt="">
@@ -40,6 +40,29 @@ function mostrarPersonajes(lista) {
       </article>
       `
 
-    
+
   })
+}
+let filtroSexo = document.getElementById("filtroSexo")
+filtroSexo.addEventListener("change", filtrar)
+
+function filtrar() {
+  const personajesFiltrados = personajes.filter(personaje => {
+    return personaje.gender.includes(filtroSexo.value)
+  })
+  mostrarPersonajes(personajesFiltrados)
+}
+
+const buscador = document.getElementById("buscador")
+buscador.addEventListener("input", buscar)
+
+function buscar() {
+  const texto = buscador.value.toLowerCase()
+
+  const personajesFiltrados = personajes.filter(personaje => {
+    return personaje.name.toLowerCase().includes(texto)
+    || personaje.occupation.toLowerCase().includes(texto)
+    || personaje.phrases.some(phrase => phrase.toLowerCase().includes(texto)) //uso some para que recorra todo el array de frases y si al menos uno incluye, entra
+  })
+  mostrarPersonajes(personajesFiltrados)
 }

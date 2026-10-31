@@ -10,7 +10,9 @@
 }
 
 body {
-  background-color: rgb(183, 247, 255)
+  background-color: rgb(183, 247, 255);
+  display: flex;
+  flex-direction: column;
 }
 
 header {
